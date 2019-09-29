@@ -67,19 +67,19 @@ With the above strategies and settings ,our WideResnet28x10 achieves <font color
 
 To reproduce the reported accuracy,follow the steps below:
 
-1)`cd swa`
+1. `cd swa`
 
-2)Modyfying shell script *run_train.sh*, specify *project_dir* , *dataset_dir* and *log_dir*as you want.
+2. Modyfying shell script *run_train.sh*, specify *project_dir* , *dataset_dir* and *log_dir*as you want.
 
-3)`./run_train.sh`
+3. `./run_train.sh`
 
 
 
 To evaluate the trained model
 
-1)Modyfying shell script *run_test.sh*, specify *project_dir* ,*dataset_dir* and *test_model* as you want.
+1. Modyfying shell script *run_test.sh*, specify *project_dir* ,*dataset_dir* and *test_model* as you want.
 
-2)`./run_test.sh`
+2. `./run_test.sh`
 
 The already trained model is available in [swa_google_drive](https://drive.google.com/open?id=1krfv0vLvYWg4tylPqzL7dTWbcXmoBUNq)
 
@@ -101,23 +101,23 @@ The quantization training settings are shown in the table below
 
 To reproduce our results, follow the steps below
 
-1) `cd`  *QuantizeCNNModel*
+1. `cd`  *QuantizeCNNModel*
 
-2) modify *run_train.sh*,specify *root_dir*,*project_dir*,*dataset_dir* and *save-dir*
+2. modify *run_train.sh*,specify *root_dir*,*project_dir*,*dataset_dir* and *save-dir*
 
-3) `./run_train.sh`
+3. `./run_train.sh`
 
 
 
 To evaluate the model
 
-1)revise *run_test.sh*,specify *evaluate* ,*load_trained_model* 
+1. revise *run_test.sh*,specify *evaluate* ,*load_trained_model* 
 
 *evaluate* is the quantized model path
 
 *load_trained_model* is the trained model path from the first stage
 
-2) `./run_test.sh`
+2. `./run_test.sh`
 
 The already quantized model is availabel in [QuantizeCNNModel_google_drive](https://drive.google.com/open?id=1b2jsLFGNPoO3lfBEFpk7GIuzAHXElsLf)
 
@@ -129,13 +129,13 @@ In this section, we will descrip the calculation details of our final our model.
 
 To get the score reported above ,follow the steps below
 
-1）`cd model-statistics`
+1. `cd model-statistics`
 
-2) Modify *run_count.sh*,specify the *quantized _model* 
+2. Modify *run_count.sh*,specify the *quantized _model* 
 
 *quantized_model* is the quantized model path
 
-3)  run `python count_wide_resnet.py`
+3. run `python count_wide_resnet.py`
 
 The deatils about how to calculate the score is shown in the *counting.py and count_wide_resnet.py*
 
