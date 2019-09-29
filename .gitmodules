@@ -1,0 +1,9 @@
+[submodule "swa"]
+	path = swa
+	url = https://github.com/Flash-engine/swa.git
+[submodule "QuantizeCNNModel"]
+	path = QuantizeCNNModel
+	url = https://github.com/Flash-engine/QuantizeCNNModel.git
+[submodule "model-statistics"]
+	path = model-statistics
+	url = https://github.com/Flash-engine/model-statistics.git
