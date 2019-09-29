@@ -1,9 +1,12 @@
 [submodule "swa"]
 	path = swa
 	url = https://github.com/Flash-engine/swa.git
+	branch = for_challenge
 [submodule "QuantizeCNNModel"]
 	path = QuantizeCNNModel
 	url = https://github.com/Flash-engine/QuantizeCNNModel.git
+	branch = for_challenge
 [submodule "model-statistics"]
 	path = model-statistics
 	url = https://github.com/Flash-engine/model-statistics.git
+	branch = for_challenge

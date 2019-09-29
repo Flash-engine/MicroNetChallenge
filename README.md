@@ -9,7 +9,7 @@ Our micronet solution can be  broken down into three stages
 1. **Train  from sratch**
 3. **Quantization** 
 
-With the above stages,our final micronet achieves 80.65% top-1 accuracy on Cifar100 dataset.The  final evaluation score is <font color=red>0.26698</font>.
+With the above stages,our final micronet achieves 80.25% top-1 accuracy on Cifar100 dataset.The  final evaluation score is <font color=red>0.26698</font>.
 
 ##Requirements
 
@@ -19,7 +19,7 @@ With the above stages,our final micronet achieves 80.65% top-1 accuracy on Cifar
 
 ## Install
 
-`git clone <url>`
+`git clone https://github.com/Flash-engine/MicroNetChallenge.git`
 
 `cd MicroNetChallenge`
 
@@ -81,13 +81,7 @@ To evaluate the trained model
 
 2)`./run_test.sh`
 
-
-
-The already trained model is available in [swa_google_drive](https://drive.google.com/drive/folders/1q-axqchTX6h81l99Hl92_2D0ccYTWW9L)
-
-You may place it in folder
-
-*${project_dir}/swa/checkpoints/WideResnet28x10/swa_cutout_mixup*
+The already trained model is available in [swa_google_drive](https://drive.google.com/open?id=1krfv0vLvYWg4tylPqzL7dTWbcXmoBUNq)
 
 
 
@@ -95,7 +89,7 @@ You may place it in folder
 
 We use [DoReFa](https://arxiv.org/abs/1606.06160) to  quantize the compressed models from the second stage and refer to  the implementation from [QuantizeCNNModel](https://github.com/nowgood/QuantizeCNNModel).All network layers except BN  layers are quantized into 4 bits.This means that the inputs,weights,biases and activations are all quantized into 4 bits. 
 
-You can find this setting in *${project_dir}/net/net_quantize_activation.py* line74~79.And our final quantized model still achieves <font color=red>80.25%</font>  top-1 accuracy on cifar100 dataset.
+You can find this setting in *${project_dir}/net/net_quantize_activation.py* line74~79. And our final quantized model still achieves <font color=red>80.25%</font>  top-1 accuracy on cifar100 dataset.
 
 The quantization training settings are shown in the table below
 
@@ -117,7 +111,7 @@ To reproduce our results, follow the steps below
 
 To evaluate the model
 
-1)revise *run_test.sh*,specify *evaluate* ,*load_trained_model* and *compressed_model*
+1)revise *run_test.sh*,specify *evaluate* ,*load_trained_model* 
 
 *evaluate* is the quantized model path
 
@@ -125,13 +119,7 @@ To evaluate the model
 
 2) `./run_test.sh`
 
-
-
-The already quantized model is availabel in [QuantizeCNNModel_google_drive]()
-
-You may place it in folder
-
-*${project_dir}/checkpoints/WideResNet28x10/INT4/mode_3/quantize_all*
+The already quantized model is availabel in [QuantizeCNNModel_google_drive](https://drive.google.com/open?id=1b2jsLFGNPoO3lfBEFpk7GIuzAHXElsLf)
 
 
 
@@ -150,14 +138,6 @@ To get the score reported above ,follow the steps below
 3)  run `python count_wide_resnet.py`
 
 The deatils about how to calculate the score is shown in the *counting.py and count_wide_resnet.py*
-
----
-
-
-
-Last but not least,we stamp here the whole architecture of wideresNet28x10
-
-![WideResNet28x10 structure](https://tva1.sinaimg.cn/large/006y8mN6gy1g7dadu8ozqj30jk9t0kim.jpg)
 
 
 
