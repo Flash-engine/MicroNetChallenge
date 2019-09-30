@@ -1,5 +1,8 @@
 # Flash MicroNet
 
+Team name:Flash
+
+Team members:  Xin Liu E-mail:750740751@qq.com
 ## Introduction
 
 This repository contains our  solution of the [MicroNet Challenge](https://micronet-challenge.github.io/index.html) hosted at NeurIPS 2019.We compete in the Cifar100 track and we use the WideResNet28x10 as the baseline model .
@@ -11,7 +14,7 @@ Our micronet solution can be  broken down into two stages
 
 With the above stages,our final micronet achieves <font color=red>80.25%</font> top-1 accuracy on Cifar100 dataset.The  final evaluation score is <font color=red>0.76348</font>.
 
-##Requirements
+## Requirements
 
 + Pytorch >=1.1.0
 + python 3.6 or above
