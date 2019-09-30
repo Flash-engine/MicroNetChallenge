@@ -1,5 +1,9 @@
 # Flash MicroNet
 
+Team name:Flash
+
+Team members:  Xin Liu E-mail:750740751@qq.com
+
 ## Introduction
 
 This repository contains our  solution of the [MicroNet Challenge](https://micronet-challenge.github.io/index.html) hosted at NeurIPS 2019.We compete in the Cifar100 track and we use the WideResNet28x10 as the baseline model .
